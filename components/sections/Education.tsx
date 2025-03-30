@@ -52,22 +52,67 @@ export default function Education() {
       title: "Microsoft Certified: Azure Data Fundamentals",
       issuer: "Microsoft",
       date: "2023",
-      credential: "DP900",
+      credential: "DP-900",
     },
     {
-      title: "Securing ASP.NET Core Apps: Advanced Techniques for Web Application Security",
+      title: "Introduction to Identity and Access Management",
       issuer: "LinkedIn Learning",
       date: "2023",
     },
     {
-      title: "EICT Kanpur Student Development Program (AI/ML)",
-      issuer: "IIT Kanpur",
-      date: "2022",
+      title: "Securing ASP.NET Core Apps: Web Application Security",
+      issuer: "LinkedIn Learning",
+      date: "2023",
+    },
+    {
+      title: ".NET 6 SDK Advanced Exploration: Attributes",
+      issuer: "Pluralsight",
+      date: "2023",
+    },
+    {
+      title: "C# Design Patterns (Part 1 & 2)",
+      issuer: "Pluralsight",
+      date: "2023",
     },
     {
       title: "Microsoft SQL Server 2022 Essential Training",
       issuer: "LinkedIn Learning",
       date: "2023",
+    },
+    {
+      title: "Threading in C#",
+      issuer: "Pluralsight",
+      date: "2023",
+    },
+    {
+      title: "AI-Assisted Engineering Course",
+      issuer: "EPAM",
+      date: "2024",
+    },
+    {
+      title: "Programming Foundations: Object-Oriented Design",
+      issuer: "LinkedIn Learning",
+      date: "2022",
+    },
+    {
+      title: "Business Analytics & Data Mining Modeling Using R",
+      issuer: "edX",
+      date: "2022",
+    },
+    {
+      title: "Deep Learning",
+      issuer: "NPTEL",
+      date: "2022",
+    },
+    {
+      title: "Data Science Foundation Certification",
+      issuer: "DataCamp",
+      date: "2022",
+    },
+    {
+      title: "EICT Kanpur Student Development Program (AI/ML)",
+      issuer: "IIT Kanpur",
+      date: "2022",
     },
   ]
 
@@ -149,7 +194,7 @@ export default function Education() {
               <Award className="h-6 w-6" />
               Certifications
             </h3>
-            <div className="relative px-12"> {/* Added padding to make space for arrows */}
+            <div className="relative px-12"> 
               <Carousel className="max-w-3xl mx-auto">
                 <CarouselContent>
                   {certifications.map((cert, index) => (
@@ -157,14 +202,14 @@ export default function Education() {
                       <div className="p-2">
                         <Card
                           className={cn(
-                            "p-6 h-40 relative overflow-hidden", // Fixed height for consistency
+                            "p-6 h-40 relative overflow-hidden", 
                             "bg-background/30 backdrop-blur-sm border border-primary/10",
                             "before:absolute before:inset-0 before:bg-gradient-to-r before:from-primary/5 before:to-purple-500/5 before:rounded-xl",
-                            "flex flex-col justify-between" // Added flex to align content consistently
+                            "flex flex-col justify-between" 
                           )}
                         >
                           <div className="relative z-10">
-                            <h4 className="text-lg font-semibold mb-2 line-clamp-2">{cert.title}</h4> {/* Added line-clamp for consistency */}
+                            <h4 className="text-lg font-semibold mb-2 line-clamp-2">{cert.title}</h4> 
                             <p className="text-sm text-muted-foreground">{cert.issuer}</p>
                           </div>
                           <div className="mt-2 flex items-center justify-between">
@@ -176,10 +221,10 @@ export default function Education() {
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <div className="absolute -left-4 top-1/2 -translate-y-1/2"> {/* Positioned arrow away from content */}
+                <div className="absolute -left-4 top-1/2 -translate-y-1/2"> 
                   <CarouselPrevious className="h-8 w-8" />
                 </div>
-                <div className="absolute -right-4 top-1/2 -translate-y-1/2"> {/* Positioned arrow away from content */}
+                <div className="absolute -right-4 top-1/2 -translate-y-1/2"> 
                   <CarouselNext className="h-8 w-8" />
                 </div>
               </Carousel>
